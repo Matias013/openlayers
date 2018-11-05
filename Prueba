@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mapa simple de OpenStreetMap con Open Layers</title>
+<link rel="stylesheet" href="https://openlayers.org/en/v4.0.1/css/ol.css" type="text/css">
+</head>
+<body>
+<h1>Mapa simple de OpenStreetMap con Open Layers</h1>
+<script src="https://openlayers.org/en/v4.0.1/build/ol.js"></script>
+<div id="map" class="map"></div>
+<script>
+var map = new ol.Map({
+layers: [new ol.layer.Tile({source: new ol.source.OSM()})],
+target: 'map',
+view: new ol.View({
+projection: 'EPSG:4326',
+center: [-82.362777, 23.092234],
+zoom: 11})});
+</script>
+</body>
+</html>
